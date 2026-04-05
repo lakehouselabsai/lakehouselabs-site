@@ -9,6 +9,9 @@
 </head>
 <body>
 
+    <!-- Theme Toggle -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
     <div class="container">
         <img src="logo.png" alt="LakeHouseLabs.AI Logo" class="logo" />
 
@@ -28,5 +31,24 @@
         </footer>
     </div>
 
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            toggle.textContent = '☀️ Light Mode';
+        }
+
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            toggle.textContent = isLight ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    </script>
+
 </body>
 </html>
+
