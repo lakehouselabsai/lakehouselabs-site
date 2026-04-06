@@ -1,94 +1,106 @@
-/* Global styles */
+/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #0a0f1f;
-  color: #e0f7ff;
-  overflow-x: hidden;
+  background-color: #05070d;
+  color: #dff6ff;
+  text-align: center;
 }
 
-/* Hero section */
+/* HERO */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 80px 20px;
   background: radial-gradient(circle at center, #0a0f1f 0%, #000 100%);
 }
-.hero-image {
-  max-width: 300px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 20px #00bfff);
-}
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.8;
+
+.logo {
+  width: 180px;
+  filter: drop-shadow(0 0 12px #00bfff);
 }
 
-/* About section */
-.about {
-  padding: 60px 10%;
-  text-align: center;
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.85;
 }
-.about h2 {
+
+/* Subtle equation accent */
+.equation-accent {
+  width: 160px;
+  margin-top: 25px;
+  opacity: 0.45;
+  filter: drop-shadow(0 0 10px #00bfff);
+}
+
+/* MILLER & PERCY SECTION */
+.duality {
+  padding: 60px 10%;
+}
+
+.duality h2 {
   font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.duality-sub {
+  opacity: 0.7;
   margin-bottom: 40px;
 }
-.duo {
+
+.duo-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
-.card {
+
+.duo-card {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
   padding: 20px;
-  width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 260px;
+  border-radius: 12px;
+  transition: 0.3s ease;
 }
-.card:hover {
-  transform: translateY(-5px);
+
+.duo-card:hover {
+  transform: translateY(-6px);
   box-shadow: 0 0 20px #00bfff;
 }
-.card img {
-  max-width: 100%;
+
+.duo-img {
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-.card h3 {
-  margin: 10px 0;
+
+.duo-card h3 {
   color: #00bfff;
+  margin-bottom: 8px;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 30px 10px;
   background: #000;
-  font-size: 0.9rem;
+  padding: 25px 10px;
   border-top: 1px solid #00bfff;
+  font-size: 0.9rem;
 }
+
 footer a {
   color: #00bfff;
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
+  .logo {
+    width: 150px;
   }
-  .duo {
-    flex-direction: column;
-    align-items: center;
+  .equation-accent {
+    width: 130px;
   }
 }
