@@ -44,3 +44,56 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LakeHouseLabs.AI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
+    <div class="container">
+        <img src="logo.png" alt="LakeHouseLabs.AI Logo" class="logo" />
+
+        <h1>LakeHouseLabs.AI</h1>
+        <p class="tagline">
+            Intelligent systems inspired by nature — blending calm, clarity, and cutting‑edge AI engineering.
+        </p>
+
+        <div class="contact">
+            <p><strong>Contact</strong></p>
+            <p>Email: <a href="mailto:chad@lakehouselabs.ai">chad@lakehouselabs.ai</a></p>
+            <p>Phone: <a href="tel:+13369373292">(336) 937‑3292</a></p>
+        </div>
+
+        <footer>
+            © 2026 LakeHouseLabs.AI — All Rights Reserved
+        </footer>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            toggle.textContent = '☀️ Light Mode';
+        }
+
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            toggle.textContent = isLight ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    </script>
+
+</body>
+</html>
